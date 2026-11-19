@@ -64,12 +64,6 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-6. Open your browser:
-
-```text
-http://127.0.0.1:8000/
-```
-
 ## Project Status
 
 This is a learning and portfolio project. Backend authentication and additional database-driven features are planned improvements.
