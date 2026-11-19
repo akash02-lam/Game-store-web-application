@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/project.css">
+</head>
+
+<body>
+
+      <div id="nav">
+       <div id="nav">
+        <div class="list">
+            <li><a href="{% url 'project' %}">STORE</a></li>
+            <li><a href="{% url 'news' %}">NEWS</a></li>
+            <li><a href="{% url 'forum' %}">FORUMS</a></li>
+            <li><a href="{% url 'support' %}">SUPPORT</a></li>
+        </div>
+    </div>
+    </div>
+<div id="log">
+<div id="login">
+      <form action="" method="POST">
+        {% csrf_token %}
+        <div class="form">
+            <h3>Sign in or signup</h3>
+                <input type="text" name="name" id="" placeholder="Enter Name">
+                <input type="email" name="email" id="" placeholder="Email Address">
+                <input type="password" name="password" id="" placeholder="Password">
+                <div class="">
+                <button class="btn" type="submit">CONTINUE</button>
+                </div>
+            </div>
+         </form>
+</div>
+<div id="im">
+    <div id="img">
+        <a href="#"><div class="im1"></div></a>
+        <a href="#"><div class="im2"></div></a>
+        <a href="#"><div class="im3"></div></a>
+        <a href="#"><div class="im4"></div></a>
+    </div>
+    <div id="img2">
+        <a href="#"><div class="im1"></div></a>
+        <a href="#"><div class="im2"></div></a>
+        <a href="#"><div class="im3"></div></a>
+
+    </div>
+</div>
+</div>
+</body>
+
+</html>

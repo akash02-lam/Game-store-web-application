@@ -1,0 +1,2387 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #101014;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.hero-carousel {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #181820;
+}
+
+.carousel-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    padding: 70px;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.7s ease;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-slide:nth-child(1) {
+    background-image:
+    linear-gradient(90deg, #080812 5%, transparent 100%),
+    url("img/crimson-desert-game-3840x2160-25363.jpg");
+}
+
+.carousel-slide:nth-child(2) {
+    background-image:
+    linear-gradient(90deg, #080812 5%, transparent 100%),
+    url("img/1412428.jpg");
+}
+
+.carousel-slide:nth-child(3) {
+    background-image:
+    linear-gradient(90deg, #080812 5%, transparent 100%),
+    url("img/wp15649783-resident-evil-requiem-wallpapers.png");
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+.slide-content {
+    max-width: 480px;
+    z-index: 2;
+}
+
+.tag {
+    color: #aaa;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.slide-content h1 {
+    font-size: 52px;
+    margin: 20px 0;
+}
+
+.slide-content p {
+    color: #d0d0d0;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.slide-content button {
+    padding: 14px 30px;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.slide-content button:hover {
+    background: #cccccc;
+    transform: translateY(-3px);
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.65);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.dots {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 5;
+}
+
+.dot {
+    width: 30px;
+    height: 4px;
+    background: #777;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dot.active {
+    background: white;
+}
+
+@media(max-width: 600px) {
+    .hero-carousel {
+        height: 400px;
+    }
+
+    .carousel-slide {
+        padding: 35px;
+    }
+
+    .slide-content h1 {
+        font-size: 34px;
+    }
+
+    .slide-content p {
+        font-size: 14px;
+    }
+}
+
+#pro {
+    background-color: rgb(20, 19, 19);
+    width: 100%;
+}
+
+#nav {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(20, 19, 19);
+}
+
+#nav .list {
+    width: 500px;
+    justify-content: space-evenly;
+    display: flex;
+    font-size: small;
+}
+
+#nav .list li {
+    list-style-type: none;
+}
+
+#nav .list a:hover {
+    transition: 0.7s;
+    color: rgb(255, 255, 255);
+}
+
+#nav .text a:hover {
+    transition: 0.7s;
+    color: rgb(255, 255, 255);
+}
+
+#nav .list a {
+    text-decoration: none;
+    size: 12px;
+    color: rgb(104, 104, 104);
+}
+
+#nav .text {
+    width: 500px;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+#nav .text a {
+    font-size: 25px;
+    margin-left: 350px;
+    color: rgb(104, 104, 104);
+}
+
+#search {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#search .text {
+    width: 30%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+#search .text p {
+    margin-left: 50px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#search .text2 {
+    width: 70%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+#search .text2 input {
+    margin-right: 20px;
+    width: 600px;
+    font-size: 20px;
+    background-color: rgb(45, 45, 45);
+    border-style: none;
+    border-radius: 50px;
+    color: white;
+    padding: 10px;
+    padding-left: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#search .text2 a {
+    height: 20px;
+    width: 20px;
+    color: black;
+}
+
+#search .btn {
+    padding: 10px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+}
+
+#search .btn:hover {
+    transition: 0.8s;
+    background-color: white;
+    color: black;
+}
+
+
+#pro #box {
+    width: 200px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#pro #box .text h4 {
+    margin-left: 50px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#games {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#games .game1 {
+    width: 250px;
+    height: 420px;
+    border-radius: 5px;
+}
+
+#games .game1:hover {
+    transition: 0.3s ease-in;
+    transition: ease-out 0.3s;
+    background-color: rgba(240, 248, 255, 0.186);
+
+}
+
+#games .game1 .img {
+    width: 100%;
+    height: 305px;
+    background-image: url(/static/Games/Borderlands.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+#games .game1 .text {
+    width: 100%;
+    height: 104px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+#games .game1 .text h5 {
+    color: rgb(81, 81, 81);
+    margin: 10px 0px;
+}
+
+#games .game2 {
+    width: 250px;
+    height: 420px;
+    border-radius: 5px;
+}
+
+#games .game2:hover {
+    transition: 0.3s ease-in;
+    transition: ease-out 0.3s;
+    background-color: rgba(240, 248, 255, 0.186);
+
+}
+
+#games .game2 .img {
+    width: 100%;
+    height: 305px;
+    background-image: url(/static/Games/Stellar\ Blade.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+#games .game2 .text {
+     width: 100%;
+    height: 104px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+#games .game2 .text h5 {
+    color: rgb(81, 81, 81);
+    margin: 10px 0px;
+}
+
+#games .game3 {
+    width: 250px;
+    height: 420px;
+    border-radius: 5px;
+}
+
+#games .game3:hover {
+    transition: 0.3s ease-in;
+    transition: ease-out 0.3s;
+    background-color: rgba(240, 248, 255, 0.186);
+
+}
+
+#games .game3 .img {
+    width: 100%;
+    height: 305px;
+    background-image: url(/static/Games/Clair\ obscur.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+#games .game3 .text {
+     width: 100%;
+    height: 104px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+#games .game3 .text h5 {
+    color: rgb(81, 81, 81);
+    margin: 10px 0px;
+}
+
+#games .game4 {
+    width: 250px;
+    height: 420px;
+    border-radius: 5px;
+}
+
+#games .game4:hover {
+    transition: 0.3s ease-in;
+    transition: ease-out 0.3s;
+    background-color: rgba(240, 248, 255, 0.186);
+
+}
+
+#games .game4 .img {
+    width: 100%;
+    height: 305px;
+    background-image: url(/static/Games/EA\ FC26.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+#games .game4 .text {
+     width: 100%;
+    height: 104px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+#games .game4 .text h5 {
+    color: rgb(81, 81, 81);
+    margin: 10px 0px;
+}
+
+#games .game5 {
+    width: 250px;
+    height: 420px;
+    border-radius: 5px;
+}
+
+#games .game5:hover {
+    transition: 0.3s ease-in;
+    transition: ease-out 0.3s;
+    background-color: rgba(240, 248, 255, 0.186);
+
+}
+
+#games .game5 .img {
+    width: 100%;
+    height: 305px;
+    background-image: url(/static/Games/Where\ Winds\ Meet.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+#games .game5 .text {
+     width: 100%;
+    height: 104px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+#games .game5 .text h5 {
+    color: rgb(81, 81, 81);
+    margin: 10px 0px;
+}
+
+#big {
+    width: 80%;
+    height: 500px;
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+    background-image: url(/static/Games/Control\ bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+#big .ad {
+    width: 80%;
+    height: 400px;
+    margin-left: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#big .ad .pic {
+    width: 100%;
+    height: 350px;
+    background-image: url(/static/Games/Control.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 90%;
+}
+
+#big .ad .text {
+    width: 30%;
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#big .ad .text h1 {
+    margin-bottom: 50px;
+    font-size: 40px;
+    color: white;
+}
+
+#big .ad .text p {
+    font-size: 15px;
+    color: rgb(192, 192, 192);
+}
+
+#big .ad .text .btn {
+    margin-top: 50px;
+    width: 100px;
+    height: 50px;
+    background: rgba(133, 133, 133, 0.578);
+    border-style: none;
+    border: 1px solid white;
+    color: white;
+}
+
+#big .ad .text .btn:hover {
+    transition: 0.6s;
+    color: black;
+    background-color: white;
+}
+
+#pro #box2 {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#games2 {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#games2 .game1 {
+    width: 250px;
+    height: 420px;
+    border-radius: 5px;
+
+}
+
+#games2 .game1:hover {
+    transition: 0.3s ease-in;
+    transition: ease-out 0.3s;
+    background-color: rgba(240, 248, 255, 0.186);
+
+}
+
+#games2 .game1 .img {
+    width: 100%;
+    height: 305px;
+    background-image: url(/static/Games/GTA\ 5.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+#games2 .game1 .text {
+     width: 100%;
+    height: 104px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+#games2 .game1 .text h5 {
+    color: rgb(81, 81, 81);
+    margin: 10px 0px;
+}
+
+#games2 .game2 {
+    width: 250px;
+    height: 420px;
+    border-radius: 5px;
+}
+
+#games2 .game2:hover {
+    transition: 0.3s ease-in;
+    transition: ease-out 0.3s;
+    background-color: rgba(240, 248, 255, 0.186);
+
+}
+
+#games2 .game2 .img {
+    width: 100%;
+    height: 305px;
+    background-image: url(/static/Games/Resident\ Evil\ Village.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+#games2 .game2 .text {
+      width: 100%;
+    height: 104px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+#games2 .game2 .text h5 {
+    color: rgb(81, 81, 81);
+    margin: 10px 0px;
+}
+
+
+#games2 .game3 {
+    width: 250px;
+    height: 420px;
+    border-radius: 5px;
+}
+
+#games2 .game3:hover {
+    transition: 0.3s ease-in;
+    transition: ease-out 0.3s;
+    background-color: rgba(240, 248, 255, 0.186);
+
+}
+
+#games2 .game3 .img {
+    width: 100%;
+    height: 305px;
+    background-image: url(/static/Games/The\ Witcher\ 3.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+#games2 .game3 .text {
+     width: 100%;
+    height: 104px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+#games2 .game3 .text h5 {
+    color: rgb(81, 81, 81);
+    margin: 10px 0px;
+}
+
+
+#games2 .game4 {
+    width: 250px;
+    height: 420px;
+    border-radius: 5px;
+}
+
+#games2 .game4:hover {
+    transition: 0.3s ease-in;
+    transition: ease-out 0.3s;
+    background-color: rgba(240, 248, 255, 0.186);
+
+}
+
+#games2 .game4 .img {
+    width: 100%;
+    height: 305px;
+    background-image: url(/static/Games/Silent\ Hill\ F.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+#games2 .game4 .text {
+     width: 100%;
+    height: 104px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+#games2 .game4 .text h5 {
+    color: rgb(81, 81, 81);
+    margin: 10px 0px;
+}
+
+#games2 .game5 {
+    width: 250px;
+    height: 420px;
+    border-radius: 5px;
+}
+
+#games2 .game5:hover {
+    transition: 0.3s ease-in;
+    transition: ease-out 0.3s;
+    background-color: rgba(240, 248, 255, 0.186);
+
+}
+
+#games2 .game5 .img {
+    width: 100%;
+    height: 305px;
+    background-image: url(/static/Games/Watch\ Dogs\ 2.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+#games2 .game5 .text {
+     width: 100%;
+    height: 104px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+#games2 .game5 .text h5 {
+    color: rgb(81, 81, 81);
+    margin: 10px 0px;
+}
+
+#games3 {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#games3 .game1 {
+    width: 250px;
+    height: 420px;
+    border-radius: 5px;
+}
+
+#games3 .game1:hover {
+    transition: 0.3s ease-in;
+    transition: ease-out 0.3s;
+    background-color: rgba(240, 248, 255, 0.186);
+
+}
+
+#games3 .game1 .img {
+    width: 100%;
+    height: 305px;
+    background-image: url(/static/Games/Mortal\ Kombat.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+#games3 .game1 .text {
+     width: 100%;
+    height: 104px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+#games3 .game1 .text h5 {
+    color: rgb(81, 81, 81);
+    margin: 10px 0px;
+}
+
+#games3 .game2 {
+    width: 250px;
+    height: 420px;
+    border-radius: 5px;
+}
+
+#games3 .game2:hover {
+    transition: 0.3s ease-in;
+    transition: ease-out 0.3s;
+    background-color: rgba(240, 248, 255, 0.186);
+
+}
+
+#games3 .game2 .img {
+    width: 100%;
+    height: 305px;
+    background-image: url(/static/Games/Tekken\ 8.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+#games3 .game2 .text {
+     width: 100%;
+    height: 104px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+#games3 .game2 .text h5 {
+    color: rgb(81, 81, 81);
+    margin: 10px 0px;
+}
+
+#games3 .game3 {
+    width: 250px;
+    height: 420px;
+    border-radius: 5px;
+}
+
+#games3 .game3:hover {
+    transition: 0.3s ease-in;
+    transition: ease-out 0.3s;
+    background-color: rgba(240, 248, 255, 0.186);
+
+}
+
+#games3 .game3 .img {
+    width: 100%;
+    height: 305px;
+    background-image: url(/static/Games/Street\ Fighter.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+#games3 .game3 .text {
+     width: 100%;
+    height: 104px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+#games3 .game3 .text h5 {
+    color: rgb(81, 81, 81);
+    margin: 10px 0px;
+}
+
+#games3 .game4 {
+    width: 250px;
+    height: 420px;
+    border-radius: 5px;
+}
+
+#games3 .game4:hover {
+    transition: 0.3s ease-in;
+    transition: ease-out 0.3s;
+    background-color: rgba(240, 248, 255, 0.186);
+
+}
+
+#games3 .game4 .img {
+    width: 100%;
+    height: 305px;
+    background-image: url(/static/Games/Mortal\ Kombat\ 11.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+#games3 .game4 .text {
+     width: 100%;
+    height: 104px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+#games3 .game4 .text h5 {
+    color: rgb(81, 81, 81);
+    margin: 10px 0px;
+}
+
+#games3 .game5 {
+    width: 250px;
+    height: 420px;
+    border-radius: 5px;
+}
+
+#games3 .game5:hover {
+    transition: 0.3s ease-in;
+    transition: ease-out 0.3s;
+    background-color: rgba(240, 248, 255, 0.186);
+
+}
+
+#games3 .game5 .img {
+    width: 100%;
+    height: 305px;
+    background-image: url(/static/Games/Dbz\ Sz.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+#games3 .game5 .text {
+     width: 100%;
+    height: 104px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+#games3 .game5 .text h5 {
+    color: rgb(81, 81, 81);
+    margin: 10px 0px;
+}
+
+#games4 {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#games4 .game1 {
+    width: 250px;
+    height: 420px;
+    border-radius: 5px;
+}
+
+#games4 .game1:hover {
+    transition: 0.3s ease-in;
+    transition: ease-out 0.3s;
+    background-color: rgba(240, 248, 255, 0.186);
+
+}
+
+#games4 .game1 .img {
+    width: 100%;
+    height: 305px;
+    background-image: url(/static/Games/Genshin\ Impact.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+#games4 .game1 .text {
+     width: 100%;
+    height: 104px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+#games4 .game1 .text h5 {
+    color: rgb(81, 81, 81);
+    margin: 10px 0px;
+}
+
+#games4 .game2 {
+    width: 250px;
+    height: 420px;
+    border-radius: 5px;
+}
+
+#games4 .game2:hover {
+    transition: 0.3s ease-in;
+    transition: ease-out 0.3s;
+    background-color: rgba(240, 248, 255, 0.186);
+
+}
+
+#games4 .game2 .img {
+    width: 100%;
+    height: 305px;
+    background-image: url(/static/Games/Infinity\ Nikki.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+#games4 .game2 .text {
+      width: 100%;
+    height: 104px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+#games4 .game2 .text h5 {
+    color: rgb(81, 81, 81);
+    margin: 10px 0px;
+}
+
+#games4 .game3 {
+    width: 250px;
+    height: 420px;
+    border-radius: 5px;
+}
+
+#games4 .game3:hover {
+    transition: 0.3s ease-in;
+    transition: ease-out 0.3s;
+    background-color: rgba(240, 248, 255, 0.186);
+
+}
+
+#games4 .game3 .img {
+    width: 100%;
+    height: 305px;
+    background-image: url(/static/Games/Valorant.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+#games4 .game3 .text {
+     width: 100%;
+    height: 104px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+#games4 .game3 .text h5 {
+    color: rgb(81, 81, 81);
+    margin: 10px 0px;
+}
+
+#games4 .game4 {
+    width: 250px;
+    height: 420px;
+    border-radius: 5px;
+}
+
+#games4 .game4:hover {
+    transition: 0.3s ease-in;
+    transition: ease-out 0.3s;
+    background-color: rgba(240, 248, 255, 0.186);
+
+}
+
+#games4 .game4 .img {
+    width: 100%;
+    height: 305px;
+    background-image: url(/static/Games/Wuthering\ Waves.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+#games4 .game4 .text {
+     width: 100%;
+    height: 104px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+#games4 .game4 .text h5 {
+    color: rgb(81, 81, 81);
+    margin: 10px 0px;
+}
+
+#games4 .game5 {
+    width: 250px;
+    height: 420px;
+    border-radius: 5px;
+}
+
+#games4 .game5:hover {
+    transition: 0.3s ease-in;
+    transition: ease-out 0.3s;
+    background-color: rgba(240, 248, 255, 0.186);
+
+}
+
+#games4 .game5 .img {
+    width: 100%;
+    height: 305px;
+    background-image: url(/static/Games/Fortnite.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+#games4 .game5 .text {
+     width: 100%;
+    height: 104px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+#games4 .game5 .text h5 {
+    color: rgb(81, 81, 81);
+    margin: 10px 0px;
+}
+
+#empty {
+    width: 100%;
+    height: 400px;
+}
+
+#footer {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(29, 29, 29);
+    padding-top: 20px;
+}
+
+#footer .text1 {
+    width: 200px;
+    height: 400px;
+    padding-left: 80px;
+}
+
+#footer .text1 li {
+    list-style-type: none;
+    padding-top: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: small;
+}
+
+#footer .text1 a {
+    text-decoration: none;
+    color: rgb(104, 104, 104);
+}
+
+
+#footer .text1 h2 {
+    color: white;
+    padding-bottom: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
+
+#footer .text2 {
+    width: 200px;
+    height: 400px;
+    padding-left: 80px;
+}
+
+#footer .text2 li {
+    list-style-type: none;
+    padding-top: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: small;
+}
+
+#footer .text2 a {
+    text-decoration: none;
+    color: rgb(104, 104, 104);
+}
+
+
+#footer .text2 h2 {
+    color: white;
+    padding-bottom: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
+
+#footer .text3 {
+    width: 200px;
+    height: 400px;
+    padding-left: 80px;
+}
+
+#footer .text3 li {
+    list-style-type: none;
+    padding-top: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: small;
+}
+
+#footer .text3 a {
+    text-decoration: none;
+    color: rgb(104, 104, 104);
+}
+
+
+#footer .text3 h2 {
+    color: white;
+    padding-bottom: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
+
+#footer .text4 {
+    width: 200px;
+    height: 400px;
+    padding-left: 80px;
+}
+
+#footer .text4 li {
+    list-style-type: none;
+    padding-top: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: small;
+}
+
+#footer .text4 a {
+    text-decoration: none;
+    color: rgb(104, 104, 104);
+}
+
+
+#footer .text4 h2 {
+    color: white;
+    padding-bottom: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
+
+#footer .text5 {
+    width: 200px;
+    height: 400px;
+    padding-left: 80px;
+}
+
+#footer .text5 li {
+    list-style-type: none;
+    padding-top: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: small;
+}
+
+#footer .text5 a {
+    text-decoration: none;
+    color: rgb(104, 104, 104);
+}
+
+
+#footer .text5 h2 {
+    color: white;
+    padding-bottom: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
+
+#footer .text6 {
+    width: 200px;
+    height: 400px;
+    padding-left: 80px;
+}
+
+#footer .text6 li {
+    list-style-type: none;
+    padding-top: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: small;
+}
+
+#footer .text6 a {
+    text-decoration: none;
+    color: rgb(104, 104, 104);
+}
+
+
+#footer .text6 h2 {
+    color: white;
+    padding-bottom: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
+
+#top {
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(29, 29, 29);
+}
+
+#top .text {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: small;
+    padding: 0px 50px;
+}
+
+#top .btn .up {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(104, 104, 104);
+    border: 1px solid white;
+    color: white;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+#top .btn .up:hover {
+    transition: 0.1s;
+    transform: scale(0.9);
+}
+
+#nav2 {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(29, 29, 29);
+}
+
+#nav2 .list {
+    width: 700px;
+    justify-content: space-evenly;
+    display: flex;
+    font-size: small;
+    margin-right: 20px;
+}
+
+#nav2 .list li {
+    list-style-type: none;
+}
+
+#nav2 .list a {
+    text-decoration: none;
+    size: 12px;
+    color: rgb(104, 104, 104);
+}
+
+#nav2 .text {
+    width: 500px;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+#nav2 .text a {
+    font-size: 25px;
+    margin-left: 350px;
+    color: rgb(104, 104, 104);
+}
+
+#for {
+    background-color: rgb(20, 19, 19);
+    width: 100%;
+}
+
+#search {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#search .text {
+    width: 30%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+#search .text p {
+    margin-left: 50px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#search .text2 {
+    width: 70%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+#search .text2 input {
+    margin-right: 20px;
+    width: 600px;
+    font-size: 20px;
+    background-color: rgb(45, 45, 45);
+    border-style: none;
+    border-radius: 50px;
+    color: white;
+    padding: 10px;
+    padding-left: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#search .text2 a {
+    height: 20px;
+    width: 20px;
+    color: black;
+}
+
+#search .btn {
+    padding: 10px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+}
+
+#search .btn:hover {
+    transition: 0.8s;
+    background-color: white;
+    color: black;
+}
+
+
+#head {
+    width: 500px;
+    height: 50px;
+    margin-left: 50px;
+}
+
+#head h1 {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 50px;
+    width: 200px;
+    height: 50px;
+}
+
+.top h2 {
+    color: white;
+}
+
+.top h4 {
+    color: rgb(127, 127, 127);
+}
+
+#table1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#table1 .t1 {
+    height: 180px;
+    width: 1500px;
+    border-radius: 7px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(45, 44, 44);
+}
+
+.top2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 50px;
+    width: 200px;
+    height: 50px;
+}
+
+.top2 h2 {
+    color: white;
+}
+
+.top2 h4 {
+    color: rgb(127, 127, 127);
+}
+
+#table2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#table2 .t2 {
+    height: 280px;
+    width: 1500px;
+    border-radius: 7px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(45, 44, 44);
+}
+
+
+#new {
+    background-color: rgb(20, 19, 19);
+    width: 100%;
+}
+
+#search {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#search .text {
+    width: 30%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+#search .text p {
+    margin-left: 50px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#search .text2 {
+    width: 70%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+#search .text2 input {
+    margin-right: 20px;
+    width: 600px;
+    font-size: 20px;
+    background-color: rgb(45, 45, 45);
+    border-style: none;
+    border-radius: 50px;
+    color: white;
+    padding: 10px;
+    padding-left: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#search .text2 a {
+    height: 20px;
+    width: 20px;
+    color: black;
+}
+
+#search .btn {
+    padding: 10px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+}
+
+#search .btn:hover {
+    transition: 0.8s;
+    background-color: white;
+    color: black;
+}
+
+
+.head h3 {
+    margin-left: 50px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#img {
+    width: 100%;
+    height: 650px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+#img .img1 {
+    height: 600px;
+    width: 700px;
+}
+
+#img .img1 h6 {
+    color: rgb(123, 123, 123);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#img .img1 .text h3 {
+    color: rgb(244, 244, 244);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#img .img1 .text p {
+    color: rgb(103, 103, 103);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+#img .img1 .text a {
+    color: rgb(103, 103, 103);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+#img .img1 .pic {
+    background-image: url(/static/news/copa-city-key-1920x1080-4c83fdfd3ab9.png);
+    background-position: center;
+    background-repeat: no repeat;
+    background-size: 100%;
+    border-radius: 4px;
+    height: 350px;
+    width: 700px;
+}
+
+#img .img2 {
+    height: 600px;
+    width: 700px;
+}
+
+#img .img2 .pic {
+    height: 350px;
+    width: 700px;
+}
+
+#img .img2 h6 {
+    color: rgb(123, 123, 123);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#img .img2 .text h3 {
+    color: rgb(244, 244, 244);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#img .img2 .text p {
+    color: rgb(103, 103, 103);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+#img .img2 .text a {
+    color: rgb(103, 103, 103);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+#img .img2 .pic {
+    background-image: url(/static/news/a-ui-menu-in-clair-obscur-expedition-33.webp);
+    background-position: center;
+    background-repeat: no repeat;
+    background-size: 100%;
+    border-radius: 4px;
+    height: 350px;
+    width: 700px;
+}
+
+#news {
+    height: 150px;
+    display: flex;
+    align-items: center;
+
+}
+
+#news .img {
+    background-image: url(/static/news/battlefield-6-season-2-featured-2048x1152-204583dfb0f3.jpg);
+    background-position: center;
+    background-repeat: no repeat;
+    background-size: 100%;
+    width: 210px;
+    height: 120px;
+    margin-left: 50px;
+    border-radius: 4px;
+}
+
+#news .text {
+    width: 950px;
+    height: 120px;
+    margin-left: 20px;
+}
+
+#news .text h6 {
+    color: rgb(123, 123, 123);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#news .text h4 {
+    color: white;
+    margin: 20px 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#news .text h5 {
+    color: rgb(147, 147, 147);
+    margin: 20px 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#news2 {
+    height: 150px;
+    display: flex;
+    align-items: center;
+
+}
+
+#news2 .img {
+    background-image: url(/static/news/hanging-out-in-mixtape-3862x2182-06de87324d3f.png);
+    background-position: center;
+    background-repeat: no repeat;
+    background-size: 100%;
+    width: 210px;
+    height: 120px;
+    margin-left: 50px;
+    border-radius: 4px;
+}
+
+#news2 .text {
+    width: 950px;
+    height: 120px;
+    margin-left: 20px;
+}
+
+#news2 .text h6 {
+    color: rgb(123, 123, 123);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#news2 .text h4 {
+    color: white;
+    margin: 20px 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#news2 .text h5 {
+    color: rgb(147, 147, 147);
+    margin: 20px 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#news3 {
+    height: 150px;
+    display: flex;
+    align-items: center;
+
+}
+
+#news3 .img {
+    background-image: url(/static/news/here-s-what-you-need-to-know-before-playing-ys-x-proud-nordics-1802x1014-2359fc5729ca.png);
+    background-position: center;
+    background-repeat: no repeat;
+    background-size: 100%;
+    width: 210px;
+    height: 120px;
+    margin-left: 50px;
+    border-radius: 4px;
+}
+
+#news3 .text {
+    width: 950px;
+    height: 120px;
+    margin-left: 20px;
+}
+
+#news3 .text h6 {
+    color: rgb(123, 123, 123);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#news3 .text h4 {
+    color: white;
+    margin: 20px 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#news3 .text h5 {
+    color: rgb(147, 147, 147);
+    margin: 20px 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#news4 {
+    height: 150px;
+    display: flex;
+    align-items: center;
+
+}
+
+#news4 .img {
+    background-image: url(/static/news/heroes-of-science-and-fiction-oxymoron-games-interview--3840x2160-c732df16f246.jpg);
+    background-position: center;
+    background-repeat: no repeat;
+    background-size: 100%;
+    width: 210px;
+    height: 120px;
+    margin-left: 50px;
+    border-radius: 4px;
+}
+
+#news4 .text {
+    width: 950px;
+    height: 120px;
+    margin-left: 20px;
+}
+
+#news4 .text h6 {
+    color: rgb(123, 123, 123);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#news4 .text h4 {
+    color: white;
+    margin: 20px 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#news4 .text h5 {
+    color: rgb(147, 147, 147);
+    margin: 20px 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+#news5 {
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+#news5 .img {
+    background-image: url(/static/news/styx-blades-of-greed-key-1920x1080-953d4aafd288.jpg);
+    background-position: center;
+    background-repeat: no repeat;
+    background-size: 100%;
+    width: 210px;
+    height: 120px;
+    margin-left: 50px;
+    border-radius: 4px;
+}
+
+#news5 .text {
+    width: 950px;
+    height: 120px;
+    margin-left: 20px;
+}
+
+#news5 .text h6 {
+    color: rgb(123, 123, 123);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#news5 .text h4 {
+    color: white;
+    margin: 20px 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#news5 .text h5 {
+    color: rgb(147, 147, 147);
+    margin: 20px 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+#sup {
+    background-image: url(/static/support/background.jpg);
+    width: 100%;
+    height: 729px;
+    background-size: 100%;
+}
+
+#sup #nav {
+    background-color: rgba(69, 69, 169, 0.332);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#sup #nav .list {
+    width: 500px;
+    justify-content: space-evenly;
+    display: flex;
+    font-size: small;
+}
+
+#sup #nav .list li {
+    list-style-type: none;
+}
+
+#sup #nav .list a {
+    text-decoration: none;
+    size: 12px;
+    color: rgb(255, 253, 253);
+}
+
+#sup #nav .list a:hover {
+    transition: 0.7s;
+    color: rgb(255, 255, 255);
+}
+
+#sup #nav .text a:hover {
+    transition: 0.7s;
+    color: rgb(255, 255, 255);
+}
+
+#sup #nav .text {
+    width: 500px;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+#sup #nav .text a {
+    font-size: 25px;
+    margin-left: 350px;
+    color: rgb(255, 255, 255);
+}
+
+#support {
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#support .help {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    width: 750px;
+    margin-left: 400px;
+}
+
+#support .help h3 {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 300px;
+    margin-bottom: 30px;
+}
+
+
+#support .help h1 {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 250px;
+    margin-bottom: 30px;
+}
+
+#support .help input {
+    border-radius: 4px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 40px;
+    background-color: rgba(240, 248, 255, 0.134);
+    border: white;
+    color: white;
+    padding-right: 20px;
+}
+
+#support .help button {
+    border-radius: 4px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 50px;
+    width: 80px;
+    margin-left: 340px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border: rgb(136, 82, 253);
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+}
+
+#support .help button:hover {
+    transition: 0.9s;
+    background-color: rgba(128, 0, 128, 0.54);
+}
+
+#support .help h6 {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 200px;
+    margin-bottom: 30px;
+}
+
+
+#box {
+    background-color: rgb(20, 19, 19);
+    width: 100%;
+    height: 679px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#box #nav {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(20, 19, 19);
+}
+
+#box #nav .list {
+    width: 500px;
+    justify-content: space-evenly;
+    display: flex;
+    font-size: small;
+}
+
+#box #nav .list li {
+    list-style-type: none;
+}
+
+#box #nav .list a {
+    text-decoration: none;
+    size: 12px;
+    color: rgb(104, 104, 104);
+}
+
+#box #nav .text {
+    width: 500px;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+#box #nav .text a {
+    font-size: 25px;
+    margin-left: 350px;
+    color: rgb(104, 104, 104);
+}
+
+#box #nav .list a:hover {
+    transition: 0.7s;
+    color: rgb(255, 255, 255);
+}
+
+#box #nav .text a:hover {
+    transition: 0.7s;
+    color: rgb(255, 255, 255);
+}
+
+#log {
+    background-color: rgb(20, 19, 19);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 679px;
+}
+
+#nav {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(20, 19, 19);
+}
+
+#nav .list {
+    width: 500px;
+    justify-content: space-evenly;
+    display: flex;
+    font-size: small;
+}
+
+#nav .list li {
+    list-style-type: none;
+}
+
+#nav .list a {
+    text-decoration: none;
+    size: 12px;
+    color: rgb(104, 104, 104);
+}
+
+#nav .text {
+    width: 500px;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+#nav .text a {
+    font-size: 25px;
+    margin-left: 350px;
+    color: rgb(104, 104, 104);
+}
+
+#nav .list a:hover {
+    transition: 0.7s;
+    color: rgb(255, 255, 255);
+}
+
+#nav .text a:hover {
+    transition: 0.7s;
+    color: rgb(255, 255, 255);
+}
+
+#login {
+    width: 400px;
+    height: 600px;
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 50px;
+    border-radius: 4px;
+}
+
+#login .form {
+    width: 400px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#login .form h3 {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#login .form input {
+    width: 300px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding-left: 15px;
+    color: rgb(104, 104, 104);
+    margin: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#login .form input:hover {
+    color: white;
+}
+
+#login .btn {
+    width: 320px;
+    height: 40px;
+    background-color: rgb(43, 43, 118);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#login .btn:hover {
+    background-color: rgb(33, 33, 79);
+}
+
+#im .h {
+    width: 400px;
+    height: 80px;
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+#login #im .h h5 {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: small;
+}
+
+#log #img {
+    width: 400px;
+    height: 100px;
+    display: flex;
+    background-color: rgb(34, 34, 34);
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 50px;
+}
+
+#log #img .im1 {
+    background-image: url(/static/LOGO/x\ box.png);
+    background-position: center;
+    background-repeat: no repeat;
+    background-size: 100%;
+    border-radius: 4px;
+    height: 50px;
+    width: 70px;
+}
+
+#log #img .im1:hover {
+    opacity: 0.3;
+    transition: 0.4s;
+}
+
+#log #img .im2 {
+    background-image: url(/static/LOGO/Playstation-logo-1.avif);
+    background-position: center;
+    background-repeat: no repeat;
+    background-size: 100%;
+    border-radius: 4px;
+    height: 50px;
+    width: 70px;
+}
+
+#log #img .im2:hover {
+    opacity: 0.3;
+    transition: 0.4s;
+}
+
+#log #img .im3 {
+    background-image: url(/static/LOGO/Nintendo.webp);
+    background-position: center;
+    background-repeat: no repeat;
+    background-size: 100%;
+    border-radius: 4px;
+    height: 50px;
+    width: 70px;
+}
+
+#log #img .im3:hover {
+    opacity: 0.3;
+    transition: 0.4s;
+}
+
+#log #img .im4 {
+    background-image: url(/static/LOGO/steam.jpg);
+    background-position: center;
+    background-repeat: no repeat;
+    background-size: 100%;
+    border-radius: 4px;
+    height: 50px;
+    width: 70px;
+}
+
+#log #img .im4:hover {
+    opacity: 0.3;
+    transition: 0.4s;
+}
+
+#log #img2 {
+    width: 400px;
+    height: 100px;
+    display: flex;
+    background-color: rgb(34, 34, 34);
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 50px;
+}
+
+#log #img2 .im1 {
+    background-image: url(/static/LOGO/facebook-new-logo-change-designboom-02.jpg);
+    background-position: center;
+    background-repeat: no repeat;
+    background-size: 100%;
+    border-radius: 4px;
+    height: 50px;
+    width: 70px;
+}
+
+#log #img2 .im1:hover {
+    opacity: 0.3;
+    transition: 0.4s;
+}
+
+#log #img2 .im2 {
+    background-image: url(/static/LOGO/google.webp);
+    background-position: center;
+    background-repeat: no repeat;
+    background-size: 100%;
+    border-radius: 4px;
+    height: 50px;
+    width: 70px;
+}
+
+#log #img2 .im2:hover {
+    opacity: 0.3;
+    transition: 0.4s;
+}
+
+#log #img2 .im3 {
+    background-image: url(/static/LOGO/apple\ log.jpg);
+    background-position: center;
+    background-repeat: no repeat;
+    background-size: 100%;
+    border-radius: 4px;
+    height: 50px;
+    width: 70px;
+}
+
+#log #img2 .im3:hover {
+    opacity: 0.3;
+    transition: 0.4s;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="static/setup.js"></script>
+    <link rel="stylesheet" href="static/project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div id="nav">
+        <div class="list">
+            <li><a href="{% url 'project' %}">STORE</a></li>
+            <li><a href="{% url 'news' %}">NEWS</a></li>
+            <li><a href="{% url 'forum' %}">FORUMS</a></li>
+            <li><a href="{% url 'support' %}">SUPPORT</a></li>
+        </div>
+        <div class="text">
+            <a href="{% url 'login' %}"><i class="fa-solid fa-circle-user"></i></a>
+        </div>
+    </div>
