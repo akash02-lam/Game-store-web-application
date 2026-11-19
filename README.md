@@ -5,11 +5,10 @@ A game store website built using Django, Python, HTML, CSS and JavaScript. This 
 ## Technologies Used
 
 - Python
-- Django 5.2
+- Django 
 - HTML5
 - CSS3
 - JavaScript
-- SQLite
 
 ## Project Pages
 
